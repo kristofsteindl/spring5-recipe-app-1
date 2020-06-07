@@ -65,62 +65,62 @@ public class DataLoader implements CommandLineRunner {
         i1.setAmount(new BigDecimal(2));
         i1.setDescription("ancho chili powder");
         i1.setUom(unitOfMeasureRepository.findByDescription("tablespoon").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i1);
+        tacos.addIngredient(i1);
 
         Ingredient i2 = new Ingredient();
         i2.setAmount(new BigDecimal(1));
         i2.setDescription("dried oregano");
         i2.setUom(unitOfMeasureRepository.findByDescription("teaspoon").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i2);
+        tacos.addIngredient(i2);
 
         Ingredient i3 = new Ingredient();
         i3.setAmount(new BigDecimal(1));
         i3.setDescription("dried cumin");
         i3.setUom(unitOfMeasureRepository.findByDescription("tablespoon").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i3);
+        tacos.addIngredient(i3);
 
         Ingredient i4 = new Ingredient();
         i4.setAmount(new BigDecimal(1));
         i4.setDescription("sugar");
         i4.setUom(unitOfMeasureRepository.findByDescription("tablespoon").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i4);
+        tacos.addIngredient(i4);
 
         Ingredient i9 = new Ingredient();
         i9.setAmount(new BigDecimal(0.5));
         i9.setDescription("salt");
         i9.setUom(unitOfMeasureRepository.findByDescription("teaspoon").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i9);
+        tacos.addIngredient(i9);
 
         Ingredient i10 = new Ingredient();
         i10.setAmount(new BigDecimal(1));
         i10.setDescription("garlic, finely chopped");
         i10.setUom(unitOfMeasureRepository.findByDescription("clove").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i10);
+        tacos.addIngredient(i10);
 
 
         Ingredient i5 = new Ingredient();
         i5.setAmount(new BigDecimal(8));
         i5.setDescription("small corn tortillas");
         i5.setUom(unitOfMeasureRepository.findByDescription("").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i5);
+        tacos.addIngredient(i5);
 
         Ingredient i6 = new Ingredient();
         i6.setAmount(new BigDecimal(3));
         i6.setDescription("packed baby arugula (3 ounces)");
         i6.setUom(unitOfMeasureRepository.findByDescription("cup").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i6);
+        tacos.addIngredient(i6);
 
         Ingredient i7 = new Ingredient();
         i7.setAmount(new BigDecimal(1));
         i7.setDescription("freshly grated black pepper");
         i7.setUom(unitOfMeasureRepository.findByDescription("dash").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i7);
+        tacos.addIngredient(i7);
 
         Ingredient i8 = new Ingredient();
         i8.setAmount(new BigDecimal(4));
         i8.setDescription("radishes, thinly sliced");
         i8.setUom(unitOfMeasureRepository.findByDescription("").orElse(defaultUnitOfMeasure));
-        tacos.getIngredients().add(i8);
+        tacos.addIngredient(i8);
 
     }
 
@@ -163,7 +163,6 @@ public class DataLoader implements CommandLineRunner {
         guacamole.setDirections(getGuacamoleDirections());
 
         Notes guacamoleNotes = getNotes(getGuacalomeRecipeNotes());
-        guacamoleNotes.setRecipe(guacamole);
         guacamole.setNotes(guacamoleNotes);
 
         setGuacalomeIngredients(guacamole);
@@ -177,71 +176,71 @@ public class DataLoader implements CommandLineRunner {
         i1.setAmount(new BigDecimal(2));
         i1.setDescription("ripe avocados");
         i1.setUom(unitOfMeasureRepository.findByDescription("each").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i1);
-        i1.setRecipe(guacamole);
+        guacamole.addIngredient(i1);
+
 
         Ingredient i2 = new Ingredient();
         i2.setAmount(new BigDecimal(0.25));
         i2.setDescription("salt");
         i2.setUom(unitOfMeasureRepository.findByDescription("teaspoon").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i2);
-        i2.setRecipe(guacamole);
+        guacamole.addIngredient(i2);
+
 
         Ingredient i3 = new Ingredient();
         i3.setAmount(new BigDecimal(1));
         i3.setDescription("fresh lime juice or lemon juice");
         i3.setUom(unitOfMeasureRepository.findByDescription("tablespoon").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i3);
-        i3.setRecipe(guacamole);
+        guacamole.addIngredient(i3);
+
 
         Ingredient i4 = new Ingredient();
         i4.setAmount(new BigDecimal(2));
         i4.setDescription("minced red onion or thinly sliced green onion");
         i4.setUom(unitOfMeasureRepository.findByDescription("tablespoon").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i4);
-        i4.setRecipe(guacamole);
+        guacamole.addIngredient(i4);
+
 
         Ingredient i5 = new Ingredient();
         i5.setAmount(new BigDecimal(1.5));
         i5.setDescription("serrano chiles, stems and seeds removed, minced");
         i5.setUom(unitOfMeasureRepository.findByDescription("").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i5);
-        i5.setRecipe(guacamole);
+        guacamole.addIngredient(i5);
+
 
         Ingredient i6 = new Ingredient();
         i6.setAmount(new BigDecimal(2));
         i6.setDescription("cilantro (leaves and tender stems), finely chopped");
         i6.setUom(unitOfMeasureRepository.findByDescription("tablespoon").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i6);
-        i6.setRecipe(guacamole);
+        guacamole.addIngredient(i6);
+
 
         Ingredient i7 = new Ingredient();
         i7.setAmount(new BigDecimal(1));
         i7.setDescription("freshly grated black pepper");
         i7.setUom(unitOfMeasureRepository.findByDescription("dash").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i7);
-        i7.setRecipe(guacamole);
+        guacamole.addIngredient(i7);
+
 
         Ingredient i8 = new Ingredient();
         i8.setAmount(new BigDecimal(0.5));
         i8.setDescription("ripe tomato, seeds and pulp removed, chopped");
         i8.setUom(unitOfMeasureRepository.findByDescription("").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i8);
-        i8.setRecipe(guacamole);
+        guacamole.addIngredient(i8);
+
 
         Ingredient i9 = new Ingredient();
         i9.setAmount(new BigDecimal(1));
         i9.setDescription("Red radishes or jicama, to garnish");
         i9.setUom(unitOfMeasureRepository.findByDescription("").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i9);
-        i9.setRecipe(guacamole);
+        guacamole.addIngredient(i9);
+
 
         Ingredient i10 = new Ingredient();
         i10.setAmount(new BigDecimal(1));
         i10.setDescription("Tortilla chips, to serve");
         i10.setUom(unitOfMeasureRepository.findByDescription("").orElse(defaultUnitOfMeasure));
-        guacamole.getIngredients().add(i10);
-        i10.setRecipe(guacamole);
+        guacamole.addIngredient(i10);
+
 
     }
 
