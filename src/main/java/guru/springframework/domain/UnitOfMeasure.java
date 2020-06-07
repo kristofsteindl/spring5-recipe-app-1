@@ -28,4 +28,12 @@ public class UnitOfMeasure {
     public void setDescription(String uom) {
         this.description = uom;
     }
+
+    @Override
+    public String toString() {
+        return "UnitOfMeasure{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
