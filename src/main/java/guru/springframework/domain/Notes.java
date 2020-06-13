@@ -9,6 +9,7 @@ import javax.persistence.*;
  */
 @Data
 @Entity
+@EqualsAndHashCode(exclude = {"recipe"})
 public class Notes {
 
     @Id
@@ -28,4 +29,11 @@ public class Notes {
         return other instanceof Notes;
     }
 
+    @Override
+    public String toString() {
+        return "Notes{" +
+                "id=" + id +
+                ", recipeNotes='" + recipeNotes + '\'' +
+                '}';
+    }
 }
