@@ -4,6 +4,7 @@ import guru.springframework.domain.*;
 import guru.springframework.repos.CategoryRepository;
 import guru.springframework.repos.RecipeRepository;
 import guru.springframework.repos.UnitOfMeasureRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Component
+@Slf4j
 public class DataLoader implements CommandLineRunner {
 
     private static Category defaultCategory;
@@ -32,6 +34,7 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        log.debug("DataLoader starting...");
         initDefaultCategory();
         initDefaultUnitOfMeasurments();
 
